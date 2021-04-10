@@ -76,7 +76,6 @@ export default {
         this.isInvalid = true
         return
       }
-      console.log('aaa')
       const formData = {
         firstName: this.firstName,
         lastName: this.lastName,

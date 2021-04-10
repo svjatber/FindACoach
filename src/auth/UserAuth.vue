@@ -75,7 +75,6 @@ export default {
        this.isLoading = true
        if(this.mode === 'login'){
          await this.$store.dispatch('auth/login', {email: this.email, password: this.password})
-         console.log(this.$store)
        }
        if(this.mode === 'signup'){
          await this.$store.dispatch('auth/signup', {email: this.email, password: this.password})

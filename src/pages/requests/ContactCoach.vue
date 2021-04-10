@@ -30,18 +30,21 @@ export default {
     }
   },
   methods: {
-    async submitForm() {
-      if(this.email === '' || !this.email.includes('@') || !this.message.length > 2 ){
-        console.log('aaaaaaaaaaaaaaaaaaaaaa')
-        this.formsIsValid = false
-        return
+     submitForm() {
+      try{
+        if(this.email === '' || !this.email.includes('@') || !this.message.length > 2 ){
+          this.formsIsValid = false
+          return
+        }
+         this.$store.dispatch('requests/contactCoach', {
+          email: this.email,
+          message: this.message,
+          coachId: this.$route.params.id
+        })
+        this.$router.push('/requests')
+      }catch (e) {
+        console.log(e.message)
       }
-      await this.$store.dispatch('requests/contactCoach', {
-        email: this.email,
-        message: this.message,
-        coachId: this.$route.params.id
-      })
-      await this.$router.replace('/requests')
     }
 
 

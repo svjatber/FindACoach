@@ -5,7 +5,7 @@
     <div>
       <base-badge v-for="area in areas" :key="area" :type="area" :title="area"/>
     </div>
-    <div class="flex justify-end">
+    <div class="flex justify-end my-2">
       <base-button link mode="outline" :to="`${$route.path}/${id}/contact`">Contact</base-button>
       <base-button link :to="`${$route.path}/${id}`">Detail</base-button>
     </div>
@@ -20,7 +20,6 @@ export default {
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
-      console.log(this.rate)
       return `${this.firstName} ${this.lastName}`
     }
   }

@@ -10,7 +10,6 @@ export default {
                     returnSecureToken: true
                 }
             )
-            console.log(res.data)
             context.commit('setUser', {
                 token: res.data.idToken,
                 userId: res.data.localId,
@@ -31,7 +30,6 @@ export default {
                     returnSecureToken: true
                 }
             )
-            console.log(res.data)
            context.commit('setUser', {
                token: res.data.idToken,
                userId: res.data.localId,

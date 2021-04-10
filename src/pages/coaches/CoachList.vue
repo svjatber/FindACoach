@@ -92,7 +92,6 @@ export default {
       this.activeFilters = updatesFilter
     },
     async loadCoaches(refresh = false){
-      console.log('1')
       this.isLoading = true
       try {
         await this.$store.dispatch('coaches/loadCoaches', {refresh})

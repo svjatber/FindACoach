@@ -36,16 +36,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _,next)=>{
-    console.log(store)
-    console.log(store.getters.isAuthenticated)
     if(to.meta.requiresAuth && !store.getters['auth/isAuthenticated']){
-        console.log('a')
         next('/auth')
     }else if(to.meta.requiresUnauth && store.getters['auth/isAuthenticated']){
-        console.log('aa')
         next('/coaches')
     }else{
-        console.log('aaa')
         next()
     }
 })

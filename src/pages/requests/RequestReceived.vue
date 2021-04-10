@@ -43,7 +43,6 @@ name: "RequestReceived",
   },
   computed: {
     receivedRequests() {
-      console.log(this.$store.getters['requests/requests'])
       return this.$store.getters['requests/requests'];
     },
     hasRequests() {

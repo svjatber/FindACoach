@@ -3,7 +3,6 @@ export default {
         state.coaches.push(payload)
     },
     setCoaches(state, payload){
-        console.log('3')
         state.coaches = payload
     },
     setFetchTimestamp(state) {

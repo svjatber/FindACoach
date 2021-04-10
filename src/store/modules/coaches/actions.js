@@ -11,8 +11,8 @@ export default {
         }
         try {
             const token = context.rootGetters['auth/token']
-            const response =  await axios.put(`https://vue3-a06ce-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=${token}`, coachData);
-            console.log(response)
+            await axios.put(`https://vue3-a06ce-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=${token}`, coachData);
+
             context.commit('registerCoach', {
                 ...coachData,
                 id: userId
@@ -25,15 +25,12 @@ export default {
 
     },
     async loadCoaches(context, payload){
-        console.log('2')
-        console.log(!payload.refresh, context.getters.shouldUpdate)
         if(!payload.refresh && context.getters.shouldUpdate){
             return
         }
         try {
             const response =  await axios.get(`https://vue3-a06ce-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`);
             const coaches = []
-            console.log(response)
 
             for(let elem in response.data){
                 const coach = {

@@ -12,10 +12,7 @@ export default {
         if(!state.lastFetch){
             return false
         }
-        console.log(state.lastFetch)
         const currentTimeStamp = new Date().getTime()
-        console.log(currentTimeStamp)
-        console.log((currentTimeStamp - state.lastFetch) / 1000)
         return (currentTimeStamp - state.lastFetch) / 1000 < 60
     }
 }
