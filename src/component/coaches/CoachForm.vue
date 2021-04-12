@@ -5,7 +5,7 @@
       <input type="text" id="firstName" v-model.trim="firstName" class="block w-full p-1 border border-gray-400 focus:border-purple-900 bg-white-100 outline-none">
     </div>
     <div class="my-2 mx-0">
-      <label for="lastName" class="font-bold mb-2 block" >First Name</label>
+      <label for="lastName" class="font-bold mb-2 block" >Last Name</label>
       <input type="text" id="lastName" v-model.trim="lastName" class="block w-full p-1 border border-gray-400 focus:border-purple-900 bg-white-100 outline-none">
     </div>
     <div class="my-2 mx-0">

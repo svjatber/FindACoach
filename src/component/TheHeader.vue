@@ -1,10 +1,10 @@
 <template>
-  <header class=" w-full box-border h-20 bg-purple-900 flex justify-center items-center">
+  <header class=" w-full box-content bg-purple-900 flex justify-center items-center">
     <nav class=" box-border flex justify-between items-center w-4/5">
       <h1 class="hidden sm:block">
         <router-link to="/" class="text-white no-underline px-2 leading-10 inline-block border-transparent border hover:border-pink-400 active:border-pink-400">Find A Coach</router-link>
       </h1>
-      <ul class="m-0 p-0  flex justify-center items-center list-none">
+      <ul class="m-0 p-0  flex justify-center items-center list-none flex-wrap">
         <li class="my-2 mx-auto ml-3 ">
           <router-link to="/coaches" class="text-white no-underline px-2 inline-block leading-10 border-transparent border hover:border-pink-400 active:border-pink-400 ">All Coaches</router-link>
         </li>
