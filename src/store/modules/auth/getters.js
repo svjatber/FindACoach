@@ -9,6 +9,7 @@ export default {
         return state.tokenExpiration
     },
     isAuthenticated(state) {
+        console.log(state)
         return !!state.token
     }
 }

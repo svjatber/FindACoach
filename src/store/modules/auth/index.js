@@ -7,9 +7,9 @@ export default {
     namespaced: true,
     state() {
         return {
-            userId: null,
-            token: null,
-            tokenExpiration: null
+            userId: localStorage.getItem('userId'),
+            token: localStorage.getItem('token'),
+            tokenExpiration: localStorage.getItem('tokenExpiration')
         }
     },
     getters,

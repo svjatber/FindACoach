@@ -80,8 +80,8 @@ export default {
          await this.$store.dispatch('auth/signup', {email: this.email, password: this.password})
 
        }
-       await this.$router.replace('/coaches')
        this.isLoading = false
+       window.location.href = '/coaches'
      }catch (e) {
         this.isLoading = false
        this.error = e.message || 'Failed to authenticate'
